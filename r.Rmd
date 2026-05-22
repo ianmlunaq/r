@@ -1,0 +1,20 @@
+---
+title: "r"
+output: html_document
+date: "2026-05-22"
+---
+
+```{r}
+par(mfrow=c(2, 2), cex=0.6, mar=c(4, 4, 1, 1))
+y <- rnorm(20)
+plot(y, type="p")
+plot(y, type="l")
+plot(y, type="b")
+plot(y, type="h")
+```
+
+```{r}
+par(mfrow=c(2, 2), cex=0.6, mar=c(4, 4, 4, 2), mex=0.8)
+plot(lm.SR <- lm(sr ~ pop15 + pop75 + dpi + ddpi, data = LifeCycleSavings),
+     id.n=1)
+```
